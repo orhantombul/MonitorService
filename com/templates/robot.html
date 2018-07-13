@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title1</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+</head>
+<body>
+
+    {% for container in container_dictionary %}
+        {% for docker in container_dictionary[container].docker_list %}
+            <div>ONAP -- {{ container }} </div>
+            <div class="flex-container">
+                 <div>
+                    {% if color == False %}
+                        <div class="card">
+                                <div class="card-header"> {{ docker.dname}}</div>
+                                    <div class="card-main">
+                                        <i class="material-icons">IpAddress :{{ docker.docker_info.ip }}</i>
+                                         <div class="main-description">Status {{ docker.docker_info.status }}</div>
+                                    </div>
+                        </div>
+                     {% else %}
+                        <div class="card1">
+                            <div class="card-header1">{{ docker.name }}</div>
+                            <div class="card-main1">
+                                <i class="material-icons1">IpAddress : {{ docker.docker_info.ip }}</i>
+                                <div class="main-description1">Status :{{ docker.docker_info.status }}</div>
+                            </div>
+                        </div>
+                    {% endif %}
+                 </div>
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+</body>
+</html>
