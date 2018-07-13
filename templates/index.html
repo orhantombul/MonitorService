@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns: xmlns:color="http://www.w3.org/1999/xhtml">
+<head>
+
+    <link rel="stylesheet" type="text/css" href="/static/main.css">
+    <title>Table V04</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+
+                {% if color == True %}
+                    <div class="table100 ver3 green m-b-110">
+                        <div class="table100-head">
+                            <table>
+                                <thead>
+                                    <tr class="row100 head">
+                                        <th class="cell100 column1">Class name </th>
+                                        <th class="cell100 column2">Type</th>
+                                        <th class="cell100 column3">Hours</th>
+                                        <th class="cell100 column4">Status</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+
+                        {% for a in x %}
+
+                        <div class="table100-body js-pscroll">
+                            <table>
+                                <tbody>
+
+
+                                    <tr class="row100 body">
+                                        <td class="cell100 column1">{{ a.name }}</td>
+                                        <td class="cell100 column2">{{ a.type }}</td>
+                                        <td class="cell100 column3">{{ a.time }}</td>
+                                        <td class="cell100 column4">{{ a.status }}</td>
+                                    </tr>
+
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="table100 ver3 red m-b-110">
+                        <div class="table100-head">
+                            <table>
+                                <thead>
+                                    <tr class="row100 head">
+                                        <th class="cell100 column1">Class name </th>
+                                        <th class="cell100 column2">Type</th>
+                                        <th class="cell100 column3">Hours</th>
+                                        <th class="cell100 column4">Status</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+
+                        {% for a in x %}
+
+                        <div class="table100-body js-pscroll">
+                            <table>
+                                <tbody>
+
+
+                                    <tr class="row100 body">
+                                        <td class="cell100 column1">{{ a.name }}</td>
+                                        <td class="cell100 column2">{{ a.type }}</td>
+                                        <td class="cell100 column3">{{ a.time }}</td>
+                                        <td class="cell100 column4">{{ a.status }}</td>
+                                    </tr>
+
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+			</div>
+		</div>
+	</div>
+
+
+
+	<script>
+		$('.js-pscroll').each(function(){
+			var ps = new PerfectScrollbar(this);
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+		});
+
+
+	</script>
+
+</body>
+</html>
+
+<br>
+
+
+</body>
+</html>
