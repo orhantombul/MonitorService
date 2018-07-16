@@ -5,6 +5,14 @@
       <option name="ignoredErrors">
         <list>
           <option value="N802" />
+          <option value="N803" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredNames">
+        <list>
+          <option value="raw_input" />
         </list>
       </option>
     </inspection_tool>
@@ -12,6 +20,8 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="Docker" />
+          <option value="com.Docker.Docker.*" />
+          <option value="com.ContainerDockerManager.container_name" />
         </list>
       </option>
     </inspection_tool>

@@ -1,16 +1,16 @@
 class DockerInfo:
     def __init__(self, dip, dstatus):
-        self.ip = dip
-        self.status = dstatus
+        self.__ip = dip
+        self.__status = dstatus
 
     def getDockerInfoIp(self):
-        return self.ip
+        return self.__ip
 
     def setDockerInfoIp(self, dip):
-        self.ip = dip
+        self.__ip = dip
 
     def getDockerInfoStatus(self):
-        return self.status
+        return self.__status
 
     def setDockerInfoStatus(self, dstatus):
-        self.status = dstatus
+        self.__status = dstatus

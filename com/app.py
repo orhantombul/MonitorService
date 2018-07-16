@@ -1,7 +1,6 @@
-from __builtin__ import raw_input
 from flask import Flask, render_template
 from com.Container import Container
-import Docker
+from com.ApplicationManager import ContainerDockerManager, createDocker
 
 app = Flask(__name__)
 
@@ -12,12 +11,10 @@ def hello_world():
     dict_container = {}
 
     for x in range(0, 1):
-        container_name = raw_input("Enter the containername : ")
+        container_name = (raw_input("Enter the containername : "))
         docker_list = []
         for y in range(0, 2):
-            docker_list.append(
-                Docker.createDocker(raw_input("Enter the dockername : "), raw_input("Enter the dockerip : "),
-                                    raw_input("Enter the dockerstatus : ")))
+            docker_list.append(createDocker(raw_input("Enter the dockername:"), raw_input("Enter the dockerip :"), raw_input("Enter the docker status :")))
         container_instance = Container(container_name, docker_list)
         container_instance.setDockerList(docker_list)
         dict_container[container_instance.name] = container_instance
