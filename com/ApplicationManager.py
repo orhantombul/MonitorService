@@ -3,7 +3,6 @@ from com.Docker import Docker
 from com.Container import Container
 from com.ApplicationManager import ApplicationManager
 
-
 def createDocker(docker_name, dip, dstatus):
     return Docker(docker_name, DockerInfo(dip, dstatus))
 
