@@ -6,15 +6,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 </head>
 <body>
-
-    {% for container in container_dictionary %}
-        {% for docker in container_dictionary[container].docker_list %}
-            <div class="card-header"> ONAP -- {{ container }} </div>
+    {% for container_ip in containerMap %}
+        {% for docker in containerMap %}
+            <div class="card-header"> ONAP -- {{ container_ip }} </div>
             <div class="flex-container">
                  <div>
                     {% if color == False %}
                         <div class="card">
-                                <div class="card-header"> {{ docker.dname}}</div>
+                                <div class="card-header">DockerName: {{docker}}</div>
                                     <div class="card-main">
                                         <div class="material-icons">IpAddress: {{ docker.docker_info.ip }}</div>
                                          <div class="material-icons">Status {{ docker.docker_info.status }}</div>

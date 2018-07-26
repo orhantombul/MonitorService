@@ -1,3 +1,4 @@
+
 class Docker:
     def __init__(self, dname, docker_info):
         self.__dname = dname
@@ -12,5 +13,5 @@ class Docker:
     def getDockerInfo(self):
         return self.__docker_info
 
-    def setDockerName(self, docker_info):
+    def setDockerInfo(self, docker_info):
         self.__docker_info = docker_info

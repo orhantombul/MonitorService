@@ -1,10 +1,10 @@
 class Container:
-    def __init__(self, ip = None, docker_list = None):
+    def __init__(self, ip=None, docker_list=None):
         self.__ip = ip
         self.__docker_list = docker_list
 
-    def getContainerName(self):
-        return self.__name
+    def getContainerIp(self):
+        return self.__ip
 
     def setIp(self, ip):
         self.__ip = ip
